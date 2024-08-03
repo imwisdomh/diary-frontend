@@ -2,7 +2,7 @@ import NavBar from "../components/NavBar";
 
 const Home = () => {
     return (
-        <div>
+        <div className="container">
             <h1>Home</h1>
             <NavBar />
         </div>
