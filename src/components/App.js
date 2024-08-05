@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Friend from "./pages/Friend";
-import MyPage from "./pages/MyPage";
+import Home from "../pages/Home";
+import Friend from "../pages/Friend";
+import MyPage from "../pages/MyPage";
 
 const App = () => {
     return (
