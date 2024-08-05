@@ -10,13 +10,19 @@ body {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     min-height: 100vh;
+    position: relative;
 }
 
 .nav {
     width: 100%;
+    max-width: 1024px;
     padding: 20px 0;
     position: fixed;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav__list {
