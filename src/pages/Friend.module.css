@@ -1,0 +1,48 @@
+.friend {
+    padding: 0 10px 0 10px;
+}
+
+.friend__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.friend__search input {
+    width: 75%;
+    height: 40px;
+    font-size: 1.25rem;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+.friend__request {
+    display: flex;
+    flex-direction: column;
+}
+
+.friend__status {
+    width: 100%;
+    display: flex;
+}
+
+.friend__sent,
+.friend__received {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.friend__sent {
+    background-color: lightcoral;
+}
+
+.friend__received {
+    background-color: lightblue;
+}
+
+.friend__list {
+    background-color: teal;
+}
