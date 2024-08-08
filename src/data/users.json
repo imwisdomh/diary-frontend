@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "username": "Kim Cheolsu",
+        "avatar": "https://avatars.githubusercontent.com/u/150656382?s=400&v=4",
+        "bio": "아이 엠 그라운드 자기소개 하기"
+    },
+    {
+        "id": 2,
+        "username": "Kim Minji",
+        "avatar": "https://avatars.githubusercontent.com/u/150656382?s=400&v=4"
+    },
+    {
+        "id": 3,
+        "username": "Lee Cheolsu",
+        "avatar": "https://avatars.githubusercontent.com/u/150656382?s=400&v=4",
+        "bio": "아이 엠 그라운드 자기소개 하기"
+    },
+    {
+        "id": 4,
+        "username": "Lee Minji",
+        "avatar": "https://avatars.githubusercontent.com/u/150656382?s=400&v=4"
+    },
+    {
+        "id": 5,
+        "username": "Park Cheolsu",
+        "avatar": "https://avatars.githubusercontent.com/u/150656382?s=400&v=4",
+        "bio": "아이 엠 그라운드 자기소개 하기"
+    },
+    {
+        "id": 6,
+        "username": "Park Minji",
+        "avatar": "https://avatars.githubusercontent.com/u/150656382?s=400&v=4"
+    }
+]
