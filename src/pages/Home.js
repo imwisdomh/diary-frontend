@@ -1,12 +1,15 @@
-import Calendar from 'react-calendar';
+import Calendar from "react-calendar";
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
+import styles from "./Home.module.css";
 
 const Home = () => {
     return (
         <div className="container">
             <Header />
-            <Calendar />
+            <div className={styles.home}>
+                <Calendar />
+            </div>
             <NavBar />
         </div>
     );
