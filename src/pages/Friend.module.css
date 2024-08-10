@@ -2,14 +2,15 @@
     padding: 0 10px 0 10px;
 }
 
-.friend__search {
+.friend__search-input,
+.friend__search-result {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
 }
 
-.friend__search input {
+.friend__search-input input {
     width: 75%;
     height: 40px;
     font-size: 1.25rem;
@@ -19,30 +20,30 @@
     border-bottom: 1px solid black;
 }
 
-.friend__request {
-    display: flex;
-    flex-direction: column;
+.friend__search-result ul {
+    width: 75%;
+    background-color: green;
 }
 
-.friend__status {
+.friend__request-status {
     width: 100%;
     display: flex;
 }
 
-.friend__sent,
-.friend__received {
+.friend__request-sent,
+.friend__request-received {
     flex: 1;
     box-sizing: border-box;
 }
 
-.friend__sent {
+.friend__request-sent {
     background-color: lightcoral;
 }
 
-.friend__received {
+.friend__request-received {
     background-color: lightblue;
 }
 
-.friend__list {
+.friend__friends-list {
     background-color: teal;
 }
