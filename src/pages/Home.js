@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Calendar from "react-calendar";
-import Header from "../components/Header";
-import NavBar from "../components/NavBar";
+import Header from "../components/Header/Header";
+import NavBar from "../components/NavBar/NavBar";
 import "react-calendar/dist/Calendar.css";
 import styles from "./Home.module.css";
 

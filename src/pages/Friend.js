@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import Header from "../components/Header";
-import NavBar from "../components/NavBar";
-import Profile from "../components/Profile";
+import Header from "../components/Header/Header";
+import NavBar from "../components/NavBar/NavBar";
+import Profile from "../components/Profile/Profile";
 import styles from "./Friend.module.css";
 
 const Friend = () => {
