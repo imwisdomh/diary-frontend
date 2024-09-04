@@ -1,11 +1,29 @@
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Header from "../components/Header/Header";
 import NavBar from "../components/NavBar/NavBar";
 import Profile from "../components/Profile/Profile";
 import styles from "./Friend.module.css";
+import users from "../data/users.json";
 
 const Friend = () => {
+    const [searchTerm, setSearchTerm] = useState("");
+    const [filteredUsers, setFilteredUsers] = useState([]);
+
+    useEffect(() => {
+        if (searchTerm) {
+            const results = users.filter(
+                (user) =>
+                    user.username.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    user.id.toString().includes(searchTerm)
+            );
+            setFilteredUsers(results);
+        } else {
+            setFilteredUsers([]);
+        }
+    }, [searchTerm]);
+
     return (
         <div className="container">
             <Header />
@@ -13,23 +31,24 @@ const Friend = () => {
                 <div className={styles["friend__search"]}>
                     <div className={styles["friend__search-input"]}>
                         <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
-                        <input type="text" placeholder="친구 검색" />
+                        <input
+                            type="text"
+                            placeholder="친구 검색"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
                     </div>
                     <div className={styles["friend__search-result"]}>
                         <ul>
-                            <li>
-                                <Profile
-                                    username="Kim Cheolsu"
-                                    bio="아이 엠 그라운드 자기소개 하기"
-                                    avatar="https://avatars.githubusercontent.com/u/150656382?s=400&v=4"
-                                />
-                            </li>
-                            <li>
-                                <Profile
-                                    username="Kim Minji"
-                                    avatar="https://avatars.githubusercontent.com/u/150656382?s=400&v=4"
-                                />
-                            </li>
+                            {filteredUsers.length > 0 ? (
+                                filteredUsers.map((user) => (
+                                    <li key={user.id}>
+                                        <Profile username={user.username} bio={user.bio} avatar={user.avatar} />
+                                    </li>
+                                ))
+                            ) : (
+                                <li>검색 결과가 없습니다.</li>
+                            )}
                         </ul>
                     </div>
                 </div>
@@ -39,37 +58,13 @@ const Friend = () => {
                         <div className={styles["friend__request-sent"]}>
                             <span>보냄</span>
                             <ul>
-                                <li>
-                                    <Profile
-                                        username="Kim Cheolsu"
-                                        bio="아이 엠 그라운드 자기소개 하기"
-                                        avatar="https://avatars.githubusercontent.com/u/150656382?s=400&v=4"
-                                    />
-                                </li>
-                                <li>
-                                    <Profile
-                                        username="Kim Minji"
-                                        avatar="https://avatars.githubusercontent.com/u/150656382?s=400&v=4"
-                                    />
-                                </li>
+                                <li></li>
                             </ul>
                         </div>
                         <div className={styles["friend__request-received"]}>
                             <span>받음</span>
                             <ul>
-                                <li>
-                                    <Profile
-                                        username="Lee Cheolsu"
-                                        bio="아이 엠 그라운드 자기소개 하기"
-                                        avatar="https://avatars.githubusercontent.com/u/150656382?s=400&v=4"
-                                    />
-                                </li>
-                                <li>
-                                    <Profile
-                                        username="Lee Minji"
-                                        avatar="https://avatars.githubusercontent.com/u/150656382?s=400&v=4"
-                                    />
-                                </li>
+                                <li></li>
                             </ul>
                         </div>
                     </div>
@@ -77,19 +72,7 @@ const Friend = () => {
                 <div className={styles["friend__friends-list"]}>
                     <span>친구 목록</span>
                     <ul>
-                        <li>
-                            <Profile
-                                username="Park Cheolsu"
-                                bio="아이 엠 그라운드 자기소개 하기"
-                                avatar="https://avatars.githubusercontent.com/u/150656382?s=400&v=4"
-                            />
-                        </li>
-                        <li>
-                            <Profile
-                                username="Park Minji"
-                                avatar="https://avatars.githubusercontent.com/u/150656382?s=400&v=4"
-                            />
-                        </li>
+                        <li></li>
                     </ul>
                 </div>
             </div>
